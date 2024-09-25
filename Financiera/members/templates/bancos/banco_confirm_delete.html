@@ -3,7 +3,7 @@
 
 {% block content %}
 <form method="post">{% csrf_token %}
-    <p>Esta seguro de que desea eliminar el banco   "{{ object }}"?</p>
+    <p>Está seguro de que desea eliminar el banco   "{{ object }}"?</p>
     {{ form }}
     <input type="submit" value="Eliminar "  class="btn btn-primary">
 </form>
