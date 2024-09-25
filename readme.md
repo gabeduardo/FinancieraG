@@ -17,3 +17,14 @@
 9.  Ingresar al navegador ` [localhost:8000](http://localhost:8000/)`
 
 ![image](https://github.com/user-attachments/assets/55a2d614-e91d-439b-8ccb-25a4b430bac1)
+
+### Comentarios de interés
+
+Se colocó un navbar en la parte superior de la app con als opciones admin, para acceser al admin de django, Bancos para la gestión de los bancos, Clientes para la gestión de los clientes y Créditos, al acceder se listan los diversos recursos, coloqué un botón con el símbolo + para añadir un nuevo recurso y en la tabla se encuentra una columna de acciones para ver los detalles del recurso, editarlo o eliminarlo
+![image](https://github.com/user-attachments/assets/c8e74cc0-f03f-433b-bc71-ab41789fcd0d)
+
+Validacion del correo en el formulario
+![image](https://github.com/user-attachments/assets/0ce034d8-83e0-435e-867e-f336f7b62f91)
+
+Validación de la fecha, se agregó una máscara en el formulario para que los datos sean ingresados en dicho formato mostrado
+![image](https://github.com/user-attachments/assets/8e4766d6-383b-41fa-bbb5-b3e47f3f2567)
