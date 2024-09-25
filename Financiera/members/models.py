@@ -57,4 +57,8 @@ class Credito(models.Model):
 
     def __str__(self):
         return f"Credito para {self.cliente.nombre_apellido}"
+    
+    def get_absolute_url(self):
+        
+        return reverse('members:credito-detail', args=[str(self.id)])
 

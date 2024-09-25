@@ -16,5 +16,10 @@ urlpatterns = [
     path('clientes/nuevo/', ClienteCreateView.as_view(), name='cliente-create'),
     path('clientes/<int:pk>/editar/', ClienteUpdateView.as_view(), name='cliente-update'),
     path('clientes/<int:pk>/eliminar/', ClienteDeleteView.as_view(), name='cliente-delete'),
+    
+    
+    path('creditos/', CreditoListView.as_view(), name='credito-list'),
+    path('clientes/<int:pk>/', CreditoDetailView.as_view(), name='credito-detail'),
+    path('creditos/nuevo/', CreditoCreateView.as_view(), name='credito-create'),
 
 ]
