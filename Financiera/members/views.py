@@ -3,7 +3,7 @@ from .models import Banco, Cliente, Credito
 from django.urls import reverse_lazy
 from django.urls import reverse
 from django.contrib import messages
-
+from .forms import ClienteForm
 
 """ Vistas para el manejo de las operaciones de los bancos  """
 class BancoListView(ListView):
@@ -33,7 +33,11 @@ class BancoUpdateView(UpdateView):
     template_name = 'bancos/banco_form.html' 
     fields = ['nombre', 'tipo', 'direccion']
 
-
+    def form_valid(self, form):
+        # Codigo apra mandar mensaje de exito al usuario de la accion realizada
+        messages.success(self.request, '¡El banco se actualizó exitosamente!')
+        return super().form_valid(form)
+    
 class BancoDeleteView(DeleteView):
     model = Banco
     template_name = 'bancos/banco_confirm_delete.html' 
@@ -66,7 +70,8 @@ class ClienteDetailView(DetailView):
 class ClienteCreateView(CreateView):
     model = Cliente
     template_name = 'clientes/cliente_form.html' 
-    fields = '__all__'
+    
+    form_class = ClienteForm
     
     def form_valid(self, form):
         # Codigo apra mandar mensaje de exito al usuario de la accion realizada
