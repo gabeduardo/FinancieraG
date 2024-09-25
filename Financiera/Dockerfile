@@ -19,9 +19,5 @@ RUN pip install --upgrade pip -r requirements/requirements-base.txt
 
 # Copy the Application code
 COPY . /app/
-COPY ./entrypoint.sh /app/entrypoint.sh
 
-# Give permission to entrypoint.sh file as executable.
-RUN chmod +x /app/entrypoint.sh
-# run entrypoint.sh
-ENTRYPOINT ["/app/entrypoint.sh"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
