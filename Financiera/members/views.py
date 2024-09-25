@@ -85,6 +85,11 @@ class ClienteUpdateView(UpdateView):
     template_name = 'clientes/cliente_form.html' 
     fields = '__all__'
     success_url = reverse_lazy('members:cliente-list') 
+    
+    def form_valid(self, form):
+        # Codigo apra mandar mensaje de exito al usuario de la accion realizada
+        messages.success(self.request, '¡El cliente se actualizó exitosamente!')
+        return super().form_valid(form)
 
 
 class ClienteDeleteView(DeleteView):
