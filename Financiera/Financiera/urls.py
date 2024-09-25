@@ -16,8 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-
+from members.views import BancoListView 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', BancoListView.as_view(), name='bancos-list'), 
     path('miembros/', include('members.urls', namespace='members')),
 ]
