@@ -22,7 +22,7 @@ class BancoCreateView(CreateView):
     model = Banco
     template_name = 'bancos/banco_form.html' 
     fields = ['nombre', 'tipo', 'direccion']
-    
+    success_url = reverse_lazy('members:bancos-list') 
     def form_valid(self, form):
         # Codigo apra mandar mensaje de exito al usuario de la accion realizada
         messages.success(self.request, '¡El banco se creó exitosamente!')
@@ -32,7 +32,7 @@ class BancoUpdateView(UpdateView):
     model = Banco
     template_name = 'bancos/banco_form.html' 
     fields = ['nombre', 'tipo', 'direccion']
-
+    success_url = reverse_lazy('members:bancos-list') 
     def form_valid(self, form):
         # Codigo apra mandar mensaje de exito al usuario de la accion realizada
         messages.success(self.request, '¡El banco se actualizó exitosamente!')
@@ -57,6 +57,7 @@ class ClienteListView(ListView):
     model = Cliente
     template_name = 'clientes/cliente_list.html' 
     context_object_name = 'clientes'
+    success_url = reverse_lazy('members:cliente-list') 
     
     
     
@@ -70,6 +71,7 @@ class ClienteDetailView(DetailView):
 class ClienteCreateView(CreateView):
     model = Cliente
     template_name = 'clientes/cliente_form.html' 
+    success_url = reverse_lazy('members:cliente-list') 
     
     form_class = ClienteForm
     
@@ -82,6 +84,7 @@ class ClienteUpdateView(UpdateView):
     model = Cliente
     template_name = 'clientes/cliente_form.html' 
     fields = '__all__'
+    success_url = reverse_lazy('members:cliente-list') 
 
 
 class ClienteDeleteView(DeleteView):
@@ -107,6 +110,7 @@ class CreditoCreateView(CreateView):
     model = Credito
     template_name = 'creditos/credito_form.html' 
     fields = '__all__'
+    success_url = reverse_lazy('members:credito-list') 
     
     def get_success_url(self):
 
@@ -126,5 +130,5 @@ class CreditoListView(ListView):
     
 class CreditoDetailView(DetailView):
     model = Credito
-    template_name = 'clientes/credito_detail.html' 
-    context_object_name = 'cliente'
+    template_name = 'creditos/credito_detail.html' 
+    context_object_name = 'credito'

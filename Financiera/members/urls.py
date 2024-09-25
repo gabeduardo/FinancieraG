@@ -19,7 +19,7 @@ urlpatterns = [
     
     
     path('creditos/', CreditoListView.as_view(), name='credito-list'),
-    path('clientes/<int:pk>/', CreditoDetailView.as_view(), name='credito-detail'),
+    path('creditos/<int:pk>/', CreditoDetailView.as_view(), name='credito-detail'),
     path('creditos/nuevo/', CreditoCreateView.as_view(), name='credito-create'),
 
 ]
