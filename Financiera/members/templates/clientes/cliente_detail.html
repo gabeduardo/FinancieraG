@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card tarjeta">
+    <div class="card-header">
+       Cliente 
+    </div>
+    <div class="card-body">
+
+            <div class="container">
+                <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+                <div class="row">
+
+                    <!-- Lafo CENTRAL del form-->
+                    <div class="col-12 col-m-4 col-lg-4">
+
+                        <div class="mb-3">
+                            <label for="inputNombres" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="inputNombres"  value="{{ cliente.nombre_apellido }}">
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="" class="form-label">F Nacimiento</label>
+                            <input type="text" class="form-control" id="inputApellidos"   value="{{cliente.fecha_nacimiento }} ">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="" class="form-label">Edad</label>
+                            <input type="text" class="form-control" id="inputCedula"  value="{{cliente.edad  }}">
+                        </div>
+
+                        
+                        <div class="mb-3">
+                            <label for="inputNombres" class="form-label">Nacionalidad</label>
+                            <input type="text" class="form-control" id="inputNombres"  value="{{ cliente.nacionalidad }}">
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="" class="form-label">Direccion</label>
+                            <input type="text" class="form-control" id="inputApellidos"   value="{{cliente.direccion_habitacion }} ">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="" class="form-label">Correo</label>
+                            <input type="text" class="form-control" id="inputCedula"  value="{{cliente.correo_electronico  }}">
+                        </div>
+
+
+                        
+                        <div class="mb-3">
+                            <label for="inputNombres" class="form-label">Telefono</label>
+                            <input type="text" class="form-control" id="inputNombres"  value="{{ cliente.telefono }}">
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="" class="form-label">Tipo Persona</label>
+                            <input type="text" class="form-control" id="inputApellidos"   value="{{cliente.tipo_persona }} ">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="" class="form-label">Banco</label>
+                            <input type="text" class="form-control" id="inputCedula"  value="{{cliente.banco_cuenta  }}">
+                        </div>
+
+
+
+                    </div>
+
+               
+
+
+
+
+
+
+
+
+                </div>
+
+              
+
+
+    </div>
+  </div>
+
+{% endblock content %}
+

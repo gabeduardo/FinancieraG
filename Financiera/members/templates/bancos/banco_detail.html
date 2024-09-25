@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card tarjeta">
+    <div class="card-header">
+       Banco 
+    </div>
+    <div class="card-body">
+
+            <div class="container">
+                <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+                <div class="row">
+
+                    <!-- Lafo CENTRAL del form-->
+                    <div class="col-12 col-m-4 col-lg-4">
+
+                        <div class="mb-3">
+                            <label for="inputNombres" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="inputNombres"  value="{{ banco.nombre }}">
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="" class="form-label">Tipo</label>
+                            <input type="text" class="form-control" id="inputApellidos"   value="{{banco.tipo }} ">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="" class="form-label">Direccion</label>
+                            <input type="text" class="form-control" id="inputCedula"  value="{{banco.direccion  }}">
+                        </div>
+
+
+
+
+                    </div>
+
+               
+
+
+
+
+
+
+
+
+                </div>
+
+              
+
+
+    </div>
+  </div>
+
+{% endblock content %}
+

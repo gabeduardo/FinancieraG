@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    build: 
+      context: ./Financiera
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./Financiera:/app
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    container_name: financiera-web

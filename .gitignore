@@ -1,0 +1,8 @@
+# Ignorar archivos y carpetas específicos
+*.pyc
+__pycache__/
+db.sqlite3
+media/
+.env
+
+git-sim_media/
