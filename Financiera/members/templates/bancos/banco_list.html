@@ -27,7 +27,7 @@
             <thead>
 
 
-
+            {% if  bancos  %}    
               <tr>
                 <th scope="col">Nombre</th>
                 <th scope="col">Tipo</th>
@@ -37,6 +37,7 @@
                 <th scope="col">Acciones</th>
                 <th></th>
               </tr>
+            {% endif %}
             </thead>
             <tbody>
                 {% for banco in bancos  %}
@@ -72,6 +73,8 @@
                             </td>
                             <td></td>
 
+                            {% empty %}
+                            <h3> No se han registrado bancos por el momento</h3>
               </tr>
               {% endfor %}
             </tbody>

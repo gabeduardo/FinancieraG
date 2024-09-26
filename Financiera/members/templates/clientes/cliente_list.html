@@ -24,7 +24,7 @@
          <table id="example" class="dataTable display nowrap" >
             <thead>
 
-
+                {% if  clientes  %}
 
               <tr>
                 <th scope="col">Nombre</th>
@@ -36,23 +36,12 @@
                 <th scope="col">Teléfono</th>
                 <th scope="col">Tipo persona</th>
                 <th scope="col">Banco </th>
-
-
-
-                
-
-
-
-
-
-
-
-
            
                 <!-- <th scope="col">Telefono2</th> -->
                 <th scope="col">Acciones</th>
                 <th></th>
               </tr>
+              {% endif %}
             </thead>
             <tbody>
                 {% for cliente in clientes  %}
@@ -93,6 +82,8 @@
                                 </div>
                             </td>
                             <td></td>
+                            {% empty %}
+                            <h3> No se han registrado clientes por el momento</h3>
 
               </tr>
               {% endfor %}

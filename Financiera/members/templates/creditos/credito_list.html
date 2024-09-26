@@ -24,7 +24,7 @@
          <table id="example" class="dataTable display nowrap" style="width:100%">
             <thead>
 
-
+            {% if  creditos  %}
 
               <tr>
                 <th scope="col">Cliente</th>
@@ -43,6 +43,7 @@
                 <th scope="col">Acciones</th>
                 <th></th>
               </tr>
+              {% endif %}
             </thead>
             <tbody>
                 {% for credito in creditos  %}
@@ -71,6 +72,8 @@
                                 </div>
                             </td>
                             <td></td>
+                            {% empty %}
+                            <h3> No se han registrado créditos por el momento</h3>
 
               </tr>
               {% endfor %}
